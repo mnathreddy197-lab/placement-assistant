@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Resume Builder - Placement Assistant</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6f9;
+            margin: 0;
+        }
+
+        .header {
+            background: #1f4e79;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 800px;
+            margin: 30px auto;
+        }
+
+        .form-box {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+            margin-bottom: 6px;
+            font-weight: bold;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 15px;
+        }
+
+        textarea {
+            min-height: 100px;
+            resize: vertical;
+        }
+
+        button {
+            background: #1f4e79;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 20px;
+            margin-right: 10px;
+        }
+
+        button:hover {
+            background: #163a5c;
+        }
+
+        .back {
+            background: #777;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="header">
+        <h1>📄 Resume Builder</h1>
+        <p>Create your placement-ready resume</p>
+    </div>
+
+    <div class="container">
+
+        <div class="form-box">
+
+            <form method="POST">
+
+                <label>Full Name</label>
+                <input
+                    type="text"
+                    name="name"
+                    placeholder="Enter your full name"
+                    required>
+
+
+                <label>Email</label>
+                <input
+                    type="email"
+                    name="email"
+                    placeholder="Enter your email"
+                    required>
+
+
+                <label>Phone Number</label>
+                <input
+                    type="tel"
+                    name="phone"
+                    placeholder="Enter your phone number"
+                    required>
+
+
+                <label>College</label>
+                <input
+                    type="text"
+                    name="college"
+                    placeholder="Enter your college name"
+                    required>
+
+
+                <label>Branch</label>
+                <input
+                    type="text"
+                    name="branch"
+                    placeholder="Example: Computer Science"
+                    required>
+
+
+                <label>CGPA</label>
+                <input
+                    type="number"
+                    name="cgpa"
+                    step="0.01"
+                    min="0"
+                    max="10"
+                    placeholder="Example: 8.5"
+                    required>
+
+
+                <label>Skills</label>
+                <textarea
+                    name="skills"
+                    placeholder="Example: Python, Java, HTML, CSS, SQL"
+                    required></textarea>
+
+
+                <label>Career Objective</label>
+                <textarea
+                    name="objective"
+                    placeholder="Write your career objective..."
+                    required></textarea>
+
+
+                <button type="submit">
+                    📄 Create Resume
+                </button>
+
+                <button
+                    type="button"
+                    class="back"
+                    onclick="location.href='/dashboard'">
+                    Back to Dashboard
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

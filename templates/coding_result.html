@@ -1,0 +1,35 @@
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Coding Test Result</title>
+</head>
+
+<body>
+
+    <h1>Coding Test Result 💻</h1>
+
+    <h2>Your Score: {{ score }} / 5</h2>
+
+    {% if score >= 4 %}
+        <h3>Strong programming basics 👍</h3>
+        <p>Continue practicing coding problems.</p>
+
+    {% elif score >= 2 %}
+        <h3>Keep practicing 💪</h3>
+        <p>Work on your programming fundamentals.</p>
+
+    {% else %}
+        <h3>More practice needed 📚</h3>
+        <p>Start with basic programming concepts.</p>
+    {% endif %}
+
+    <br>
+
+    <button onclick="location.href='/dashboard'">
+        Back to Dashboard
+    </button>
+
+</body>
+</html>
+```

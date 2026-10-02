@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Placement Assistant Dashboard</title>
+
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        .header {
+            background: #1f4e79;
+            color: white;
+            padding: 25px;
+            text-align: center;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1000px;
+            margin: 30px auto;
+        }
+
+        .welcome {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 25px;
+        }
+
+        .buttons {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 25px;
+        }
+
+        button {
+            background: #1f4e79;
+            color: white;
+            border: none;
+            padding: 12px 18px;
+            margin: 7px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 15px;
+        }
+
+        button:hover {
+            background: #163a5c;
+        }
+
+        .readiness {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .percentage {
+            font-size: 45px;
+            font-weight: bold;
+            margin: 15px;
+            color: #1f4e79;
+        }
+
+        .progress-container {
+            width: 100%;
+            height: 25px;
+            background: #e0e0e0;
+            border-radius: 15px;
+            overflow: hidden;
+            margin: 20px 0;
+        }
+
+        .progress-bar {
+            height: 100%;
+            width: 75%;
+            background: #1f4e79;
+            border-radius: 15px;
+        }
+
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th,
+        td {
+            padding: 12px;
+            border: 1px solid #ddd;
+            text-align: center;
+        }
+
+        th {
+            background: #1f4e79;
+            color: white;
+        }
+
+        @media (max-width: 600px) {
+            button {
+                width: 90%;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="header">
+
+        <h1>🎓 Placement Assistant</h1>
+
+        <p>Your Placement Preparation Dashboard</p>
+
+    </div>
+
+
+    <div class="container">
+
+
+        <div class="welcome">
+
+            <h2>Welcome, {{ name }} 👋</h2>
+
+            <p>
+                Track your placement preparation progress here.
+            </p>
+
+        </div>
+
+
+        <div class="buttons">
+
+            <h2>📚 Preparation Sections</h2>
+
+            <button onclick="location.href='/aptitude'">
+                🧠 Aptitude Test
+            </button>
+
+            <button onclick="location.href='/coding'">
+                💻 Coding Test
+            </button>
+
+            <button onclick="location.href='/interview'">
+                🎤 Mock Interview
+            </button>
+
+            <button onclick="location.href='/resume'">
+                📄 Resume Builder
+            </button>
+
+        </div>
+
+
+        <div class="readiness">
+
+            <h2>🎯 Placement Readiness</h2>
+
+            <div class="percentage">
+                {{ readiness_score }}%
+            </div>
+
+            <div class="progress-container">
+
+                <div class="progress-container">
+    <div class="progress-bar"></div>
+</div>
+
+            </div>
+
+            <p>
+                Your current preparation progress
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <h2>📊 Your Progress</h2>
+
+            <table>
+
+                <tr>
+                    <th>Skill</th>
+                    <th>Score / Status</th>
+                </tr>
+
+                <tr>
+                    <td>🧠 Aptitude</td>
+                    <td>{{ aptitude_score }} / 5</td>
+                </tr>
+
+                <tr>
+                    <td>💻 Coding</td>
+                    <td>{{ coding_score }} / 5</td>
+                </tr>
+
+                <tr>
+                    <td>🎤 Interview</td>
+                    <td>{{ interview_status }}</td>
+                </tr>
+
+                <tr>
+                    <td>📄 Resume</td>
+                    <td>{{ resume_status }}</td>
+                </tr>
+
+            </table>
+
+        </div>
+
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Coding Test - Placement Assistant</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6f9;
+            margin: 0;
+        }
+
+        .header {
+            background: #1f4e79;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 800px;
+            margin: 30px auto;
+        }
+
+        .question {
+            background: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .question h3 {
+            margin-top: 0;
+        }
+
+        input[type="radio"] {
+            margin-right: 8px;
+        }
+
+        button {
+            background: #1f4e79;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-right: 10px;
+        }
+
+        button:hover {
+            background: #163a5c;
+        }
+
+        .back {
+            background: #777;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="header">
+        <h1>💻 Coding Test</h1>
+        <p>Test your programming fundamentals</p>
+    </div>
+
+    <div class="container">
+
+        <form method="POST">
+
+            <div class="question">
+                <h3>1. Which keyword is used to create a function in Python?</h3>
+
+                <label>
+                    <input type="radio" name="q1" value="function" required>
+                    function
+                </label><br>
+
+                <label>
+                    <input type="radio" name="q1" value="def">
+                    def
+                </label><br>
+
+                <label>
+                    <input type="radio" name="q1" value="fun">
+                    fun
+                </label>
+            </div>
+
+
+            <div class="question">
+                <h3>2. Which is a Boolean data type?</h3>
+
+                <label>
+                    <input type="radio" name="q2" value="integer" required>
+                    Integer
+                </label><br>
+
+                <label>
+                    <input type="radio" name="q2" value="string">
+                    String
+                </label><br>
+
+                <label>
+                    <input type="radio" name="q2" value="boolean">
+                    Boolean
+                </label>
+            </div>
+
+
+            <div class="question">
+                <h3>3. What does HTML stand for?</h3>
+
+                <label>
+                    <input type="radio" name="q3" value="a" required>
+                    Hyper Text Markup Language
+                </label><br>
+
+                <label>
+                    <input type="radio" name="q3" value="b">
+                    High Text Machine Language
+                </label><br>
+
+                <label>
+                    <input type="radio" name="q3" value="c">
+                    Hyperlink Text Management Language
+                </label>
+            </div>
+
+
+            <div class="question">
+                <h3>4. Which symbol is used for a comment in Python?</h3>
+
+                <label>
+                    <input type="radio" name="q4" value="//" required>
+                    //
+                </label><br>
+
+                <label>
+                    <input type="radio" name="q4" value="#">
+                    #
+                </label><br>
+
+                <label>
+                    <input type="radio" name="q4" value="/*">
+                    /*
+                </label>
+            </div>
+
+
+            <div class="question">
+                <h3>5. Which language is used for styling web pages?</h3>
+
+                <label>
+                    <input type="radio" name="q5" value="html" required>
+                    HTML
+                </label><br>
+
+                <label>
+                    <input type="radio" name="q5" value="javascript">
+                    JavaScript
+                </label><br>
+
+                <label>
+                    <input type="radio" name="q5" value="css">
+                    CSS
+                </label>
+            </div>
+
+
+            <button type="submit">
+                Submit Test
+            </button>
+
+            <button type="button"
+                    class="back"
+                    onclick="location.href='/dashboard'">
+                Back to Dashboard
+            </button>
+
+        </form>
+
+    </div>
+
+</body>
+</html>

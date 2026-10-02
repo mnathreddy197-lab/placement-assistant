@@ -1,0 +1,35 @@
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Aptitude Result</title>
+</head>
+
+<body>
+
+    <h1>Aptitude Test Result 🎯</h1>
+
+    <h2>Your Score: {{ score }} / 5</h2>
+
+    {% if score >= 4 %}
+        <h3>Good job! 👍</h3>
+        <p>Your aptitude preparation is going well.</p>
+
+    {% elif score >= 2 %}
+        <h3>Keep practicing 💪</h3>
+        <p>You can improve with more practice.</p>
+
+    {% else %}
+        <h3>More practice needed 📚</h3>
+        <p>Practice basic aptitude questions regularly.</p>
+    {% endif %}
+
+    <br>
+
+    <button onclick="location.href='/dashboard'">
+        Back to Dashboard
+    </button>
+
+</body>
+</html>
+```

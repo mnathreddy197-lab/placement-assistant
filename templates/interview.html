@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mock Interview - Placement Assistant</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6f9;
+            margin: 0;
+        }
+
+        .header {
+            background: #1f4e79;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 800px;
+            margin: 30px auto;
+        }
+
+        .question {
+            background: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .question h3 {
+            margin-top: 0;
+        }
+
+        textarea {
+            width: 100%;
+            min-height: 100px;
+            padding: 10px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 15px;
+            resize: vertical;
+        }
+
+        button {
+            background: #1f4e79;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-right: 10px;
+        }
+
+        button:hover {
+            background: #163a5c;
+        }
+
+        .back {
+            background: #777;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="header">
+        <h1>🎤 Mock Interview</h1>
+        <p>Practice common placement interview questions</p>
+    </div>
+
+    <div class="container">
+
+        <form method="POST">
+
+            <div class="question">
+                <h3>1. Tell me about yourself.</h3>
+
+                <textarea
+                    name="q1"
+                    placeholder="Write your answer here..."
+                    required></textarea>
+            </div>
+
+
+            <div class="question">
+                <h3>2. Why should we hire you?</h3>
+
+                <textarea
+                    name="q2"
+                    placeholder="Write your answer here..."
+                    required></textarea>
+            </div>
+
+
+            <div class="question">
+                <h3>3. What are your strengths?</h3>
+
+                <textarea
+                    name="q3"
+                    placeholder="Write your answer here..."
+                    required></textarea>
+            </div>
+
+
+            <div class="question">
+                <h3>4. What is your career goal?</h3>
+
+                <textarea
+                    name="q4"
+                    placeholder="Write your answer here..."
+                    required></textarea>
+            </div>
+
+
+            <button type="submit">
+                Submit Interview
+            </button>
+
+            <button
+                type="button"
+                class="back"
+                onclick="location.href='/dashboard'">
+                Back to Dashboard
+            </button>
+
+        </form>
+
+    </div>
+
+</body>
+</html>

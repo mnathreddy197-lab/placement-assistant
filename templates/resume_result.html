@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Resume</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6f9;
+            margin: 0;
+            padding: 30px;
+        }
+
+        .resume {
+            background: white;
+            max-width: 800px;
+            margin: auto;
+            padding: 40px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+        }
+
+        .header {
+            text-align: center;
+            border-bottom: 2px solid #1f4e79;
+            padding-bottom: 20px;
+        }
+
+        .header h1 {
+            margin: 0;
+            color: #1f4e79;
+        }
+
+        .contact {
+            margin-top: 10px;
+            color: #555;
+        }
+
+        .section {
+            margin-top: 25px;
+        }
+
+        .section h2 {
+            color: #1f4e79;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 5px;
+        }
+
+        .skills {
+            white-space: pre-line;
+        }
+
+        .buttons {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        button {
+            background: #1f4e79;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            margin: 5px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 15px;
+        }
+
+        button:hover {
+            background: #163a5c;
+        }
+
+        .back {
+            background: #777;
+        }
+
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+
+            .resume {
+                box-shadow: none;
+                max-width: none;
+            }
+
+            .buttons {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="resume">
+
+        <div class="header">
+
+            <h1>{{ name }}</h1>
+
+            <div class="contact">
+                📧 {{ email }}
+                &nbsp; | &nbsp;
+                📱 {{ phone }}
+            </div>
+
+        </div>
+
+
+        <div class="section">
+
+            <h2>🎯 Career Objective</h2>
+
+            <p>{{ objective }}</p>
+
+        </div>
+
+
+        <div class="section">
+
+            <h2>🎓 Education</h2>
+
+            <p>
+                <strong>{{ college }}</strong>
+            </p>
+
+            <p>
+                Branch: {{ branch }}
+            </p>
+
+            <p>
+                CGPA: {{ cgpa }}
+            </p>
+
+        </div>
+
+
+        <div class="section">
+
+            <h2>💻 Skills</h2>
+
+            <p class="skills">{{ skills }}</p>
+
+        </div>
+
+
+        <div class="buttons">
+
+            <button onclick="window.print()">
+                🖨️ Print / Save PDF
+            </button>
+
+            <button
+                class="back"
+                onclick="location.href='/dashboard'">
+                ← Back to Dashboard
+            </button>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

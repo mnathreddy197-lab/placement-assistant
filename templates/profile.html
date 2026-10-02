@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Profile</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f7fb;
+            margin: 0;
+        }
+
+        header {
+            background: #172554;
+            color: white;
+            padding: 25px;
+            text-align: center;
+        }
+
+        .form-container {
+            background: white;
+            max-width: 600px;
+            margin: 40px auto;
+            padding: 30px;
+            border-radius: 12px;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        input,
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 7px;
+            box-sizing: border-box;
+        }
+
+        button {
+            margin-top: 25px;
+            padding: 12px 25px;
+            background: #2563eb;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #1d4ed8;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Student Profile</h1>
+        <p>Tell us about yourself</p>
+    </header>
+
+    <div class="form-container">
+
+        <form method="POST">
+
+            <label>Name</label>
+            <input type="text" name="name" placeholder="Enter your name" required>
+
+            <label>College</label>
+            <input type="text" name="college" placeholder="Enter your college" required>
+
+            <label>Branch</label>
+            <input type="text" name="branch"
+                   placeholder="AI & Data Science" required>
+
+            <label>CGPA</label>
+            <input type="number" step="0.01" name="cgpa"
+                   placeholder="Enter your CGPA">
+
+            <label>Programming Language</label>
+
+            <select name="programming_language">
+                <option>Python</option>
+                <option>Java</option>
+                <option>C++</option>
+                <option>JavaScript</option>
+            </select>
+
+            <label>Career Goal</label>
+
+            <select name="career_goal">
+                <option>Software Developer</option>
+                <option>Data Scientist</option>
+                <option>Machine Learning Engineer</option>
+                <option>AI Engineer</option>
+                <option>Data Analyst</option>
+            </select>
+
+            <button type="submit">Save Profile</button>
+
+        </form>
+
+    </div>
+
+</body>
+
+</html>
